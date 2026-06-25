@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071a38">
+  <title>Nocny Półmaraton — plan treningowy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky-glow"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Strona główna">
+      <span class="brand-mark">◒</span>
+      <span>NOCNY<small>21.1</small></span>
+    </a>
+    <nav>
+      <a class="active" href="#plan">Plan</a>
+      <a href="#tempa">Tempa</a>
+      <a href="#wskazowki">Wskazówki</a>
+    </nav>
+    <button id="resetButton" class="ghost-button" type="button">Wyczyść postęp</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> TWÓJ CEL</p>
+        <h1>PÓŁMARATON<br><em>PO ZMROKU</em></h1>
+        <p class="hero-lead">10 tygodni. 3 biegi tygodniowo. Bez zajechania — za to z pewnością na starcie.</p>
+        <div class="race-date-wrap">
+          <label for="raceDate">Data zawodów</label>
+          <input id="raceDate" type="date" value="2026-09-05">
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="moon"></div>
+        <div class="stars">✦　·　✧　　·　✦</div>
+        <div class="runner">🏃</div>
+        <div class="road-line"></div>
+      </div>
+    </section>
+
+    <section class="dashboard" aria-label="Podsumowanie planu">
+      <article class="next-card">
+        <div class="card-topline">
+          <span class="status-dot"></span>
+          <span id="nextLabel">NAJBLIŻSZY TRENING</span>
+          <span id="nextDate" class="muted"></span>
+        </div>
+        <div class="next-content">
+          <div>
+            <p id="nextType" class="tiny-label">BIEG 1</p>
+            <h2 id="nextTitle">5 km spokojnie</h2>
+            <p id="nextPace">Tempo 6:10–6:30/km</p>
+          </div>
+          <button id="quickComplete" class="primary-button" type="button">Oznacz jako wykonany <span>✓</span></button>
+        </div>
+      </article>
+
+      <article class="progress-card">
+        <div class="ring" id="progressRing">
+          <div><strong id="progressPercent">0%</strong><span>planu</span></div>
+        </div>
+        <div>
+          <p class="tiny-label">POSTĘP</p>
+          <h3><span id="doneCount">0</span> z <span id="totalCount">30</span> treningów</h3>
+          <p id="distanceSummary" class="muted">0 z 0 km za Tobą</p>
+        </div>
+      </article>
+
+      <article class="countdown-card">
+        <p class="tiny-label">DO STARTU</p>
+        <strong id="daysLeft">—</strong>
+        <span>dni</span>
+        <div class="mini-route"><i></i><i></i><i></i><i></i><i></i></div>
+      </article>
+    </section>
+
+    <section id="plan" class="plan-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> DROGA DO 21,1 KM</p>
+          <h2>TWÓJ PLAN TRENINGOWY</h2>
+        </div>
+        <div class="legend"><i></i> Kliknij trening, aby wpisać wynik</div>
+      </div>
+      <div id="weeks" class="weeks"></div>
+    </section>
+
+    <section id="tempa" class="pace-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> ŚCIĄGA</p>
+          <h2>TEMPA TRENINGOWE</h2>
+        </div>
+      </div>
+      <div class="pace-grid">
+        <article><span class="pace-icon">◷</span><div><b>Krótkie biegi</b><small>swobodny, równy rytm</small></div><strong>6:10–6:35<small>/km</small></strong></article>
+        <article><span class="pace-icon">≈</span><div><b>Długie wybiegania</b><small>rozmowa bez zadyszki</small></div><strong>6:25–7:05<small>/km</small></strong></article>
+        <article><span class="pace-icon">⌁</span><div><b>Bardzo lekko</b><small>regeneracyjnie</small></div><strong>6:30–7:00<small>/km</small></strong></article>
+        <article><span class="pace-icon">ϟ</span><div><b>Przebieżki 15–20 s</b><small>szybko, ale luźno</small></div><strong>4:50–5:15<small>/km</small></strong></article>
+      </div>
+    </section>
+
+    <section id="wskazowki" class="tips-section">
+      <article>
+        <span>01</span>
+        <h3>ZACZNIJ WOLNIEJ</h3>
+        <p>Pierwszy kilometr każdego biegu pobiegnij w tempie 6:35–6:55/km. Na długim nawet 6:45–7:10/km.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>PRZEBIEŻKI NA KONIEC</h3>
+        <p>Po normalnym biegu przyspiesz na 15–20 sekund, potem 90–120 sekund bardzo wolno lub marsz.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>DŁUGI BIEG = CIERPLIWOŚĆ</h3>
+        <p>Nie ścigaj zegarka. Celem jest wytrzymałość i czas na nogach, nie sprawdzian formy.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <span class="footer-star">★</span>
+    <p><b>NAJWAŻNIEJSZE:</b> regularność wygrywa z perfekcją.</p>
+    <span>Powodzenia na trasie ✦</span>
+  </footer>
+
+  <dialog id="workoutDialog">
+    <form id="workoutForm" method="dialog">
+      <button class="dialog-close" value="cancel" aria-label="Zamknij">×</button>
+      <p id="dialogWeek" class="eyebrow"><span></span> TYDZIEŃ 1</p>
+      <h2 id="dialogTitle">Bieg 1</h2>
+      <p id="dialogPlan" class="dialog-plan"></p>
+      <input id="workoutId" type="hidden">
+      <div class="form-grid">
+        <label>Dystans (km)<input id="actualDistance" type="number" min="0" step="0.01" placeholder="np. 5.2"></label>
+        <label>Czas (min)<input id="actualTime" type="number" min="0" step="1" placeholder="np. 34"></label>
+      </div>
+      <fieldset>
+        <legend>Jak się biegło?</legend>
+        <div class="mood-options">
+          <label><input type="radio" name="mood" value="ciężko"><span>😮‍💨<small>Ciężko</small></span></label>
+          <label><input type="radio" name="mood" value="okej"><span>🙂<small>Okej</small></span></label>
+          <label><input type="radio" name="mood" value="super"><span>⚡<small>Super</small></span></label>
+        </div>
+      </fieldset>
+      <label>Notatka<textarea id="notes" rows="3" placeholder="Pogoda, samopoczucie, trasa…"></textarea></label>
+      <label class="completed-check"><input id="completed" type="checkbox"><span></span> Trening wykonany</label>
+      <button class="primary-button full" value="default" type="submit">Zapisz trening</button>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
